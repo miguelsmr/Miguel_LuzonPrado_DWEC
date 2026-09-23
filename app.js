@@ -8,3 +8,15 @@ boton.addEventListener('click', function () {
   contador++;
   aviso.textContent = 'Has pulsado ' + contador + ' veces';
 });
+
+const modonoche = document.getElementById('modonoche');
+
+modonoche.addEventListener('click', function () {
+  document.body.classList.toggle('tema-claro');
+
+  if (document.body.classList.contains('tema-claro')) {
+    modonoche.textContent = '☀️';
+  } else {
+    modonoche.textContent = '🌙';
+  }
+});
