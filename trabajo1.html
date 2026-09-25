@@ -17,5 +17,28 @@
 
     <h1>Trabajo 1</h1>
     <p>Esta es la página del primer trabajo de DWEC.</p>
+
+     <h2>1. En línea (onclick)</h2>
+    <p id="mensaje1">Todavía no ha pasado nada.</p>
+    <button onclick="document.getElementById('mensaje1').textContent = 'Cambiado en línea';">Púlsame</button>
+
+    <h2>2. Interno (script en el HTML)</h2>
+    <p id="mensaje2">Todavía no ha pasado nada.</p>
+    <button id="boton2">Púlsame</button>
+
+    <h2>3. Externo (app.js)</h2>
+    <p id="mensaje3">Todavía no ha pasado nada.</p>
+    <button id="boton3">Púlsame</button>
+
+    <script>
+    const boton2 = document.getElementById('boton2');
+    const mensaje2 = document.getElementById('mensaje2');
+
+    boton2.addEventListener('click', function () {
+    mensaje2.textContent = 'Cambiado con script interno';
+    });
+    </script>
+
+    <script src="app.js"></script>
 </body>
 </html>
